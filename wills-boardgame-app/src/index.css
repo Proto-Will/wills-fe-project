@@ -1,0 +1,123 @@
+body {
+  background-color: #E3FDFD;
+  color: #00ADB5;
+  margin: 0;
+  font-family: 'Kanit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  list-style-type: none;
+}
+
+h1 {
+  font-size: 80px;;
+  font-family: 'Ms Madi', cursive
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/************************************************************Classes***********************************************************/
+
+.list-images {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.grid-container {
+  padding-top: 20px;;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+.category-list {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.all-links {
+  color: #769FCD;
+  text-decoration: none;
+}
+
+.all-links:visited {
+  color: #769FCD;
+  text-decoration: none;
+}
+
+.all-links:hover {
+  color: #EA5455;
+}
+
+.buttons {
+  margin: 1.5px;
+  background-color: #8785A2;
+  border: none;
+  color: #112D4E;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.buttons:hover {
+  margin: 1.5px;
+  background-color: #112D4E;
+  border: none;
+  color: #8785A2;
+  padding: 9px 17px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  box-shadow: 0 0 3px #112D4E;
+}
+
+.add-item-input {
+  margin: 6px;
+}
+
+/************************************************************Ids***********************************************************/
+
+
+#homepage-link {
+  padding-bottom: 20px;
+}
+
+#button-div {
+  padding-bottom: 20px;
+}
+
+#add-item-form {
+  margin: 30px;;
+}
+
+#add-item-button {
+  margin: 50px;;
+}
+
+#categories-list {
+  margin: 1.5px;
+  background-color: #8785A2;
+  border: none;
+  color: #112D4E;
+}
+
+#title-link:hover {
+  color: #769FCD;
+}
+
+#login-button {
+  margin-left: 7px;
+  padding: 4px 15px;
+}
+
+#basket-button {
+  margin: 15px;
+}
