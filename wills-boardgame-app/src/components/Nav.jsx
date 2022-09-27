@@ -1,10 +1,8 @@
 import { useNavigate} from 'react-router-dom'
 
-export default function Nav({currUser}) {
+export default function Nav() {
 
     const navigate = useNavigate();
-    let loggedIn = false;
-    if (currUser) loggedIn = true;
 
     return (
         <nav>

@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function ReviewCard({ review }) {
 
     return (
-        <li className="review-container" key={review}>
+        <li className="review-container" key={review.review_id}>
             <img className="list-images" src={review.review_img_url} alt={`${review.title} avatar`} />
             <h3>{review.title}</h3>
             <h4>Designer: {review.designer}</h4>
