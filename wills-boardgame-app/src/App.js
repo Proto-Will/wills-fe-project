@@ -28,7 +28,7 @@ function App() {
   // }, [])
   
   useEffect(() => {
-      fetch("https://wills-project-games.herokuapp.com/api/reviews")
+      fetch("https://all-about-boardgames.herokuapp.com/api/reviews")
           .then((response) => response.json())
           .then((reviews) => {
               setReviewList(reviews.reviews);

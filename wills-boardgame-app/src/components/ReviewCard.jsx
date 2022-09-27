@@ -5,9 +5,12 @@ export default function ReviewCard({ review }) {
 
     return (
         <li className="review-container" key={review}>
-            <img className="list-images" src={review} alt={`${review} avatar`} />
-            <h3>{review}</h3>
-            <p>Kudos: {review}</p>
+            <img className="list-images" src={review.review_img_url} alt={`${review.title} avatar`} />
+            <h3>{review.title}</h3>
+            <h4>Designer: {review.designer}</h4>
+            <p>Category: {review.category}</p>
+            <p>Owner: {review.owner}</p>
+            <p>Score: {review.votes}</p>
         </li>
     );
 }
