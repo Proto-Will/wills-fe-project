@@ -7,8 +7,6 @@ import Footer from './components/Footer';
 import Nav from './components/Nav';
 import Home from './pages/Home';
 import AllReviews from './pages/AllReviews';
-import AllCategories from './pages/AllCategories';
-import CategorisedReviews from './pages/CategorisedReviews';
 // Importing components ends here
 
 function App() {
@@ -21,8 +19,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reviews" element={<AllReviews />} />
-        <Route path="/reviews/category/:category" element={<CategorisedReviews />} />
-        <Route path="/categories" element={<AllCategories />} />
       </Routes>
 
       <Footer/>

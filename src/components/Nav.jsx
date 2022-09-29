@@ -10,7 +10,6 @@ export default function Nav() {
             </div>
             <div id="button-div">
                 <button className="buttons" onClick={() => navigate("/reviews")}>Reviews</button>
-                <button className="buttons" onClick={() => navigate("/categories")}>Categories</button>
             </div>
         </nav>
     );
