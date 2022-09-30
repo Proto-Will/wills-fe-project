@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import { useState, useEffect } from "react";
 import ReviewCard from "../components/ReviewCard";
 import { useNavigate} from 'react-router-dom'
+import VoteOnReview from "../components/Vote";
 
 export default function IndividualReview() {
 
@@ -28,6 +29,7 @@ export default function IndividualReview() {
         <div>            
             <ReviewCard review={review} />
                 <p>{review.review_body}</p>
+            <VoteOnReview review={review} />
             <button className="buttons" onClick={() => navigate(`/reviews/${ID}/comments`)}>Comments</button>
         </div>
     );
