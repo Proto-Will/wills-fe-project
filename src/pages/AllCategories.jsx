@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 export default function AllCategories() {
 
     const [categoryList, setCategoryList] = useState([]);
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(true)
+        setIsLoading(true);
         fetch("https://all-about-boardgames.herokuapp.com/api/categories")
             .then((response) => response.json())
             .then((categories) => {
                 setCategoryList(categories.categories);
-                setIsLoading(false)
+                setIsLoading(false);
             })
     }, [])
     

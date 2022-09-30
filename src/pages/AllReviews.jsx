@@ -5,23 +5,22 @@ import { useState, useEffect } from 'react';
 export default function AllReviews() {
 
     const [reviewList, setReviewList] = useState([]);
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(true)
+        setIsLoading(true);
         fetch("https://all-about-boardgames.herokuapp.com/api/reviews")
             .then((response) => response.json())
             .then((reviews) => {
                 setReviewList(reviews.reviews);
-                setIsLoading(false)
+                setIsLoading(false);
             })
     }, [])
     
     if(isLoading) return <p>Loading...</p>
 
-    return (
+return (
         <section>
-            {/* add login functionality here if not already logged in */}
             <div className="grid-container">
                 {
                     reviewList.map((review) => {
