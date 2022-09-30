@@ -27,7 +27,7 @@ export default function CategorisedReviews() {
                 {
                     filtered.map((review) => {
                         return (
-                            <div className="grid-item">
+                            <div className="grid-item" key={review.review_id}>
                                 <ReviewCard review={review} />
                             </div>
                         

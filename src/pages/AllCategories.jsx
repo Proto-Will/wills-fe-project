@@ -23,7 +23,7 @@ export default function AllCategories() {
             <ol className="category-list">
                 {
                     categoryList.map((category) => {
-                        return (<li><Link className="all-links" to={`/reviews/category/${category.slug}`}>{category.slug}</Link></li>)
+                        return (<li key={category.slug}><Link className="all-links" to={`/reviews/category/${category.slug}`}>{category.slug}</Link></li>)
                     })
                 }
             </ol>
