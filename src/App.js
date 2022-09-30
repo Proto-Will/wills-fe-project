@@ -10,7 +10,6 @@ import AllReviews from './pages/AllReviews';
 import AllCategories from './pages/AllCategories';
 import CategorisedReviews from './pages/CategorisedReviews';
 import IndividualReview from './pages/IndividualReview';
-import Comments from './pages/Comments';
 
 function App() {
 
@@ -25,7 +24,6 @@ function App() {
         <Route path="/reviews/category/:category" element={<CategorisedReviews />} />
         <Route path="/reviews/:review_id" element={<IndividualReview />} />
         <Route path="/categories" element={<AllCategories />} />
-        <Route path="/reviews/:review_id/comments" element={<Comments />} />
       </Routes>
 
       <Footer/>
