@@ -10,6 +10,7 @@ export default function ReviewCard({ review }) {
             <h4>Designer: {review.designer}</h4>
             <p>Category: {review.category}</p>
             <p>Owner: {review.owner}</p>
+            <p>{review.review_body}</p>
             <p>Score: {review.votes}</p>
         </li>
     );
