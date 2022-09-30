@@ -6,16 +6,20 @@ import ReviewCard from "../components/ReviewCard";
 export default function CategorisedReviews() {   
     const [reviewList, setReviewList] = useState([]);
     const { category } = useParams();
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        fetch("https://all-about-boardgames.herokuapp.com/api/reviews")
+        setIsLoading(true)
+        fetch("https://final-boardgame-api.herokuapp.com/api/reviews")
             .then((response) => response.json())
             .then((reviews) => {
                 setReviewList(reviews.reviews);
+                setIsLoading(false)
             })
     }, [])
 
     let filtered = reviewList.filter((review) => {return review.category === category})
+    if(isLoading) return <p>Loading...</p>
 
     return (
         <section>
@@ -23,7 +27,7 @@ export default function CategorisedReviews() {
                 {
                     filtered.map((review) => {
                         return (
-                            <div className="grid-item">
+                            <div className="grid-item" key={review.review_id}>
                                 <ReviewCard review={review} />
                             </div>
                         

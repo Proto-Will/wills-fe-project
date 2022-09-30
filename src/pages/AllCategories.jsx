@@ -8,7 +8,7 @@ export default function AllCategories() {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch("https://all-about-boardgames.herokuapp.com/api/categories")
+        fetch("https://final-boardgame-api.herokuapp.com/api/categories")
             .then((response) => response.json())
             .then((categories) => {
                 setCategoryList(categories.categories);
@@ -16,14 +16,14 @@ export default function AllCategories() {
             })
     }, [])
 
-if (isLoading) return <p>Loading...</p>
+    if(isLoading) return <p>Loading...</p>
 
     return (
         <section>
             <ol className="category-list">
                 {
                     categoryList.map((category) => {
-                        return (<li><Link className="all-links" to={`/reviews/category/${category.slug}`}>{category.slug}</Link></li>)
+                        return (<li key={category.slug}><Link className="all-links" to={`/reviews/category/${category.slug}`}>{category.slug}</Link></li>)
                     })
                 }
             </ol>
