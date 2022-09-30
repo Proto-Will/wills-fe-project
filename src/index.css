@@ -27,12 +27,14 @@ code {
 
 .grid-container {
   padding-top: 20px;;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   grid-template-columns: auto auto auto;
 }
 
 .grid-item {
-  padding: 20px;
+  padding: 20%;
 }
 
 .category-list {
@@ -111,4 +113,10 @@ code {
 
 #title-link:hover {
   color: #769FCD;
+}
+
+@media screen and (min-width: 600px) {
+  .grid-container {
+    display: grid;
+}
 }
