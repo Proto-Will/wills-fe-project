@@ -27,12 +27,8 @@ export default function IndividualReview() {
     return  (
         <div>            
             <ReviewCard review={review} />
-            <div>
                 <p>{review.review_body}</p>
-            </div>
-            <div>
             <button className="buttons" onClick={() => navigate(`/reviews/${ID}/comments`)}>Comments</button>
-            </div>
         </div>
     );
 }
