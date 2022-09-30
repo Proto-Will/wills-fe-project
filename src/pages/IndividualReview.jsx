@@ -13,7 +13,7 @@ export default function IndividualReview() {
 
         useEffect(() => {
         setIsLoading(true)
-        fetch(`https://all-about-boardgames.herokuapp.com/api/reviews/${review_id}`)
+        fetch(`https://final-boardgame-api.herokuapp.com/api/reviews/${review_id}`)
             .then((response) => response.json())
             .then((data) => {
                 setReview(data.review);

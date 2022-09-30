@@ -10,7 +10,7 @@ export default function CategorisedReviews() {
 
     useEffect(() => {
         setIsLoading(true)
-        fetch("https://all-about-boardgames.herokuapp.com/api/reviews")
+        fetch("https://final-boardgame-api.herokuapp.com/api/reviews")
             .then((response) => response.json())
             .then((reviews) => {
                 setReviewList(reviews.reviews);

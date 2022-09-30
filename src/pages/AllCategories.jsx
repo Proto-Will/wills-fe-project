@@ -8,14 +8,14 @@ export default function AllCategories() {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch("https://all-about-boardgames.herokuapp.com/api/categories")
+        fetch("https://final-boardgame-api.herokuapp.com/api/categories")
             .then((response) => response.json())
             .then((categories) => {
                 setCategoryList(categories.categories);
                 setIsLoading(false);
             })
     }, [])
-    
+
     if(isLoading) return <p>Loading...</p>
 
     return (
