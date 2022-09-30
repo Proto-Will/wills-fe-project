@@ -28,7 +28,6 @@ export default function IndividualReview() {
     return  (
         <div>            
             <ReviewCard review={review} />
-                <p>{review.review_body}</p>
             <VoteOnReview review={review} />
             <button className="buttons" onClick={() => navigate(`/reviews/${ID}/comments`)}>Comments</button>
         </div>
